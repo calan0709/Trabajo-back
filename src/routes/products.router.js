@@ -18,7 +18,7 @@ productRouter.post('/',async(req, res)=>{
         next(error)
    }
 })
-
+//....
 //leemos la informacion de los productos/READ
 productRouter.get('/',async(req, res)=>{ 
     try {
