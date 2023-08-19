@@ -1,10 +1,12 @@
 import  {Router}  from "express";
 import productRouter from "./products.router.js"
+import userRouter from "./user.router.js";
 
 const indexRouter = Router();
 
 //rutas
-indexRouter.use('/Product', productRouter)
+indexRouter.use('/Product', productRouter);
+indexRouter.use('/user',userRouter)
 
 //emergent
 

@@ -3,11 +3,8 @@ import Product_models from "../models/product.js";
 
 const productRouter = Router();
 
-const products = []; //arreglo vacio para incertar productos
-//GET
-
 //create/Post
-productRouter.post('/',async(req, res)=>{
+productRouter.post('/',async(req,res,next)=>{
    try {
         let one = await Product_models.create(req.body)
         return res.status(201).json({
@@ -20,7 +17,7 @@ productRouter.post('/',async(req, res)=>{
 })
 //....
 //leemos la informacion de los productos/READ
-productRouter.get('/',async(req, res)=>{ 
+productRouter.get('/',async(req,res,next)=>{ 
     try {
         let all = await Product_models.find()
         return res.status(200).json({
@@ -33,7 +30,7 @@ productRouter.get('/',async(req, res)=>{
 })
 
 //UPDATE
-productRouter.put('/',async(req,res)=>{
+productRouter.put('/:id',async(req,res,next)=>{
     try {
         let {id} = req.params
         let data = req.body
@@ -55,8 +52,23 @@ productRouter.put('/',async(req,res)=>{
 
 //delete
 
-productRouter.delete('/', (req, res)=>{
-    
+productRouter.delete('/:id',async(req,res,next)=>{
+    try {
+        let {id} = req.params
+        let one = await Product_models.findByIdAndDelete(id)
+        if (one){
+            return res.status(200).json({
+                succes:true,
+                message:'delated'
+            })
+        }
+        return res.status(404).json({
+            succes:false,
+            message:'product not found'
+        })
+    } catch (error) {
+        next(error)
+    }
 })
 
 export default productRouter;
