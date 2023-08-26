@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/loging.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <nav>
+            <ul>
+                <li>
+                    <img src="/img/global.png" alt="" href="/index.html">
+                    <a href="/index.html">Start</a>
+                    <a href="">My product</a>
+                    <a href="/loging.html">Login</a>
+                </li>
+            </ul>
+        </nav>
+    
+    </nav>
+<main> 
+    <div class="container" id="container"> 
+        <div class="form-container"> 
+            <div class="container-create"> 
+                <h1>Create Account</h1>
+                <form action="/api/user" method="POST"> <!-- en "ACTION" colocamos una ruta, y en "METHOD" post para crear, "ENCTYPE=multipart/form-data" se utiliza para la carga de archivos  -->
+                    <label> Name: </label>
+                    <input name="name">
+                    <label> Last Name: </label>
+                    <input name="lastname">
+                    <label> Mail: </label>
+                    <input name="mail">
+                    <label> User Name: </label>
+                    <input name="username">
+                    <label> Password: </label>
+                    <input name="password">
+                    <input type="submit">
+                </form>
+            </div>
+            <div class="container-in"> 
+                <h1>Sing In</h1>
+                <form action="/" method="post"> <!-- en "ACTION" colocamos una ruta, y en "METHOD"   -->
+                    <label> User Name: </label>
+                    <input name="username">
+                    <label> Password: </label>
+                    <input name="password">
+                    <input type="submit">
+                </form>
+            </div>
+        </div>
+    </div>
+<div class="container-product">
+    <div>
+        <h2>Create Products</h2>
+        <form action="/api/user" method="POST"> <!-- en "ACTION" colocamos una ruta, y en "METHOD" post para crear, "ENCTYPE=multipart/form-data" se utiliza para la carga de archivos  -->
+            <label> Product: </label>
+            <input name="name">
+            <label> Description: </label>
+            <input name="description">
+            <label> Cost: </label>
+            <input name="cost">
+            <label> Image: </label>
+            <input name="image">
+            <input type="submit">
+        </form>
+    </div>
+</div>
+</main>
+</body>
+</html>

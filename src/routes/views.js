@@ -2,11 +2,11 @@ import  {Router}  from "express";
 import productRouter from "./products.router.js"
 import userRouter from "./user.router.js";
 
-const indexRouter = Router();
+const viewsRouter = Router();
 
 //rutas
-indexRouter.use('/Product', productRouter);
-indexRouter.use('/user',userRouter)
+viewsRouter.use('/Product', productRouter);
+viewsRouter.use('/user',userRouter)
 
 //emergent
 
@@ -19,4 +19,4 @@ Swal.fire({
 }) */
 
 
-export default indexRouter;
+export default viewsRouter;

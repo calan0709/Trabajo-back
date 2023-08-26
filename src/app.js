@@ -1,6 +1,6 @@
 import Express from "express";
 import __dirname from './utils.js';
-import indexRouter from "./routes/index.js";
+import viewsRouter from "./routes/views.js";
 import {connect} from "mongoose"
 import errorHandler from './middlewares/errorHandler.js'
 import notFoundHandler from './middlewares/notFoundHandler.js'
@@ -15,7 +15,7 @@ app.use(Express.static('./src/public'));
 app.set('views', `${__dirname}/views`);
 
 //router
-app.use('/api', indexRouter);
+app.use('/api', viewsRouter);
 app.use(errorHandler);
 app.use(notFoundHandler);
 
