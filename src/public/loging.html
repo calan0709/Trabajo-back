@@ -23,38 +23,45 @@
 <main> 
     <div class="container" id="container"> 
         <div class="form-container"> 
-            <div class="container-create"> 
-                <h1>Create Account</h1>
-                <form action="/api/user" method="POST"> <!-- en "ACTION" colocamos una ruta, y en "METHOD" post para crear, "ENCTYPE=multipart/form-data" se utiliza para la carga de archivos  -->
-                    <label> Name: </label>
-                    <input name="name">
-                    <label> Last Name: </label>
-                    <input name="lastname">
-                    <label> Mail: </label>
-                    <input name="mail">
-                    <label> User Name: </label>
-                    <input name="username">
-                    <label> Password: </label>
-                    <input name="password">
-                    <input type="submit">
-                </form>
+            <div class="iconoAccount"> 
+                <button class="button-icono" id="icono.account" onclick="openUser()"><img src="./img/account.png" alt="">Create Account</button>
+                <div class="container-create"> 
+                    <h1>Create Account</h1>
+                    <form action="/api/user" method="POST"> <!-- en "ACTION" colocamos una ruta, y en "METHOD" post para crear, "ENCTYPE=multipart/form-data" se utiliza para la carga de archivos  -->
+                        <label> Name: </label>
+                        <input name="name">
+                        <label> Last Name: </label>
+                        <input name="lastname">
+                        <label> Mail: </label>
+                        <input name="mail">
+                        <label> User Name: </label>
+                        <input name="username">
+                        <label> Password: </label>
+                        <input name="password">
+                        <input type="submit">
+                    </form>
+                </div>
             </div>
-            <div class="container-in"> 
-                <h1>Sing In</h1>
-                <form action="/" method="post"> <!-- en "ACTION" colocamos una ruta, y en "METHOD"   -->
-                    <label> User Name: </label>
-                    <input name="username">
-                    <label> Password: </label>
-                    <input name="password">
-                    <input type="submit">
-                </form>
+            <div class="iconoLogin"> 
+                <button class="button-icono" id="icono.login" onclick="openUserlogin()"><img src="./img/login.png" alt="">Login</button>
+                <div class="container-in"> 
+                    <h1>Sing In</h1>
+                    <form action="/" method="post"> <!-- en "ACTION" colocamos una ruta, y en "METHOD"   -->
+                        <label> User Name: </label>
+                        <input name="username">
+                        <label> Password: </label>
+                        <input name="password">
+                        <input type="submit">
+                    </form>
+                </div>
             </div>
         </div>
     </div>
+<button class="create-product" onclick="openProduct()">Create Product</button>
 <div class="container-product">
     <div>
         <h2>Create Products</h2>
-        <form action="/api/user" method="POST"> <!-- en "ACTION" colocamos una ruta, y en "METHOD" post para crear, "ENCTYPE=multipart/form-data" se utiliza para la carga de archivos  -->
+        <form action="/api/Product" method="POST"> <!-- en "ACTION" colocamos una ruta, y en "METHOD" post para crear, "ENCTYPE=multipart/form-data" se utiliza para la carga de archivos  -->
             <label> Product: </label>
             <input name="name">
             <label> Description: </label>
@@ -66,7 +73,13 @@
             <input type="submit">
         </form>
     </div>
+    <button class="list-product">List Products</button>
 </div>
+    <div class="list.products">
+        
+    </div>
 </main>
+<script src="/js/index.js"></script>
+
 </body>
 </html>

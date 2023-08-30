@@ -1,25 +1,62 @@
-
+body{
+    background-image: url(../img/fondo-inicio.jpg);
+}
 .container{
-    background-color: antiquewhite;
+    background-color: rgba(42, 156, 227, 0.304);
     width:100%;
  }
  .form-container{
-     background-color: rgb(195, 245, 245);
+     background-color:  rgba(42, 156, 227, 0.304);
      display: flex;
      flex-direction:row;
      justify-content: space-around;
      width: 100%;
  }
  form{
-     background-color: rgb(200, 242, 242);
+     background-color:  rgba(42, 156, 227, 0.304);
      display: flex;
      flex-wrap: wrap;
      flex-direction: column;
      width: 100%;
+     align-items: center;
+     text-align: center;
  }
+ form input{
+    width: 80%;
+ }
+
+ .iconoAccount{
+    width: 100%;
+    text-align: center;
+    border: solid;
+ }
+ .iconoLogin{ 
+    width: 100%;
+    text-align: center;
+    border: solid;
+}
+.container-create{
+    display: none;
+    align-items: center;
+    text-align: center;
+}.container-in{
+    display: none;
+}
+.button-icono{
+    background-color: transparent;
+    border: none;
+    width: 20%;
+    align-items: center;
+    text-align: center;
+}
+.button-icono img{
+    width: 100%;
+}
+
+
 nav{
     width: 100%;
-    background-color: rgb(234, 244, 46);
+    background-color: rgba(42, 156, 227, 0.304);
 }
 li{
     width: 100%;
@@ -29,6 +66,12 @@ li{
     align-items: center;
     text-decoration: none;
 }
+a{
+    text-decoration: none;
+}
 img{
     width: 5%;
+}
+.container-product{
+    display: none;
 }
