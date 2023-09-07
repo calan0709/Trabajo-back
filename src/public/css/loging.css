@@ -1,19 +1,30 @@
 body{
-    background-image: url(../img/fondo-inicio.jpg);
+    background-color: rgba(255, 255, 255, 0.666);
+}
+h1{
+    color: rgb(0, 0, 0);
+}
+h2{
+    color: rgb(0, 0, 0);
+}
+
+nav{
+    width: 100%;
+    background-color: rgba(42, 156, 227, 0.304);
 }
 .container{
-    background-color: rgba(42, 156, 227, 0.304);
+    background-color: rgba(58, 176, 249, 0.304);
     width:100%;
  }
  .form-container{
-     background-color:  rgba(42, 156, 227, 0.304);
+     background-color:  rgba(85, 181, 240, 0.304);
      display: flex;
      flex-direction:row;
      justify-content: space-around;
      width: 100%;
  }
  form{
-     background-color:  rgba(42, 156, 227, 0.304);
+     background-color:  rgba(77, 172, 231, 0.304);
      display: flex;
      flex-wrap: wrap;
      flex-direction: column;
@@ -54,10 +65,6 @@ body{
 }
 
 
-nav{
-    width: 100%;
-    background-color: rgba(42, 156, 227, 0.304);
-}
 li{
     width: 100%;
     display: flex;
@@ -68,10 +75,33 @@ li{
 }
 a{
     text-decoration: none;
+    color: rgb(0, 0, 0);
 }
 img{
     width: 5%;
 }
 .container-product{
     display: none;
+}
+.product-List{
+    display: none;
+}
+/* MyProduct */
+
+.containerProducts{
+    background-color: rgba(95, 175, 225, 0.656);
+    width: 100%;
+}
+.containerProducts article{
+    border: solid;
+    background-color: aliceblue;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+.containerProducts article img{
+    width: 30%;
+}
+.containerProducts article button{
+    background-color: rgba(87, 87, 234, 0.857);
 }
