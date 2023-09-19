@@ -44,7 +44,30 @@ const openProduct = ()=>{
         containerLogin.style.display="none"
     })
 } 
+/* edit product */
 
+
+openedit = async()=>{
+    try{ 
+        const editbutton = document.getElementById("editproduct")
+        const editProductList = document.querySelector('.editProductList')
+        editbutton.addEventListener('click', (evt)=> {
+            evt.preventDefault()
+            editProductList.style.display="block"
+            })
+       
+   
+} catch(error) {
+
+}
+}
+closeEdit = ()=>{
+    const exitEdit = document.querySelector('.exitEdit')
+    exitEdit.addEventListener('click', (evt)=>{
+        evt.preventDefault()
+        editProductList.style.display="none"
+        }) 
+}
 
 /* ProductsList */
 
@@ -59,14 +82,6 @@ const openList = ()=>{
     buttonLinst.addEventListener('click', (evt)=>{
         evt.preventDefault()
         createUser.style.display="none"
-    })
-}
-const productList = ()=>{
-    buttonLinst.addEventListener('click', (evt)=> {
-        evt.preventDefault()
-        const dataList = productCard()
-        document.querySelector('.product-List').innerHTML='<h1>${dataList.name}</h1>'
-      
     })
 }
 
@@ -90,9 +105,12 @@ const ListsProducts = async ()=> {
       const name = document.createElement('h3');//crea texto
       const description = document.createElement('p');
       const cost = document.createElement('p');
-      const buy = document.createElement('button')
+      const edit = document.createElement('button')
 
-     
+      edit.textContent = 'Edit'
+      edit.id = 'editproduct'
+      edit.onclick = openedit()
+      
       const textname = document.createTextNode(list.name);//texto para la imagen
       const textdescription = document.createTextNode(list.description);//texto para la imagen
       const textcost = document.createTextNode(list.cost);//texto para la imagen
@@ -106,7 +124,7 @@ const ListsProducts = async ()=> {
       articulo.appendChild(name);//dentro de articulo ponemos un nombre
       articulo.appendChild(description);
       articulo.appendChild(cost);
-      articulo.appendChild(buy);
+      articulo.appendChild(edit);
   
       listProduct.appendChild(articulo);//dentro del contenedor ponemos articulo
       }
@@ -118,3 +136,4 @@ const ListsProducts = async ()=> {
   }
     }
     ListsProducts()
+    

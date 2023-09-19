@@ -7,7 +7,9 @@ let schema = new Schema({
     name: {type:String, required:true},
     description: {type:String, require:true},
     cost: {type:Number, required:true},
-    image: {type:String}
+    image: {type:String},
+    stock: {type:Number, required:true},
+    code: {type:Number, required:true}
 
 })
 
