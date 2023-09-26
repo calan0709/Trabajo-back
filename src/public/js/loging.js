@@ -1,5 +1,5 @@
 
-/* button-account-login */
+/* button-register-login */
 
 const createUser = document.querySelector(".container-create");
 const loginUser = document.querySelector(".container-in");
@@ -44,6 +44,9 @@ const openProduct = ()=>{
         containerLogin.style.display="none"
     })
 } 
+/* container-login */
+
+
 /* edit product */
 
 

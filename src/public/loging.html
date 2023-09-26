@@ -47,12 +47,13 @@
                 <button class="button-icono" id="icono.login" onclick="openUserlogin()"><img src="./img/login.png" alt="">Login</button>
                 <div class="container-in"> 
                     <h1>Sing In</h1>
-                    <form action="/" method="post"> <!-- en "ACTION" colocamos una ruta, y en "METHOD"   -->
+                    <form action="/api/session" method="post"> <!-- en "ACTION" colocamos una ruta, y en "METHOD"   -->
                         <label> User Name: </label>
                         <input name="username">
                         <label> Password: </label>
                         <input name="password">
-                        <input type="submit">
+                        <button class="login">login</button>
+                        <button class="signout">signout</button>
                     </form>
                 </div>
             </div>

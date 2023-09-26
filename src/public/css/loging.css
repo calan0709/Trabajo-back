@@ -37,13 +37,13 @@ nav li a img{
     width: 100%;
 }
 
-main{
+.cardContainer{
     text-align: center;
     display: grid;
     grid-gap: 3px;
     grid-template-columns: repeat(2,1fr);
 }
-main .FilterProducts{
+.cardContainer .FilterProducts{
     text-align: center;
     border: solid;
     display: flex;
